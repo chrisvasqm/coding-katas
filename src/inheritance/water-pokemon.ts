@@ -1,4 +1,4 @@
-import { Pokemon } from "./pokemon.js";
+import {Pokemon} from './pokemon.js';
 
 export class WaterPokemon extends Pokemon {
   override attack(): void {
