@@ -1,13 +1,19 @@
-export class Stack {
-  private readonly items: unknown[] = [];
+export class Stack<T> {
+  private readonly items: T[] = [];
 
-  push(item: unknown): void {
+  push(item: T) {
     this.items.push(item);
   }
 
-  pop(): unknown {
-    if (this.items.length === 0) throw new Error("Stack is empty.");
+  pop(): T {
+    if (this.items.length === 0) {
+      throw new Error('Stack is empty.');
+    }
 
-    return this.items.pop();
+    const lastItemIndex = this.items.length - 1;
+    const lastItem = this.items[lastItemIndex];
+    this.items.splice(lastItemIndex, 1);
+
+    return lastItem!;
   }
 }
