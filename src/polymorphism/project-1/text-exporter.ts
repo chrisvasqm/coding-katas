@@ -1,5 +1,5 @@
-import type { Document } from "./document.js";
-import type { Exporter } from "./exporter.js";
+import type {Document} from './document.js';
+import type {Exporter} from './exporter.js';
 
 export class TextExporter implements Exporter {
   export(document: Document): void {
