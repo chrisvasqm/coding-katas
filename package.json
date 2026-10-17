@@ -1,0 +1,16 @@
+{
+  "name": "katas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TypeScript solutions to the exercises in https://gist.github.com/chrisvasqm/a6fca6521b61ddfb39da48ccbe156fe8",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/main.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}
