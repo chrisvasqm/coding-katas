@@ -1,21 +1,21 @@
 export class Stopwatch {
-  private hasStarted = false;
+  private isRunning = false;
 
   start(): void {
-    if (this.hasStarted) {
-      console.log("Stopwatch already started");
+    if (this.isRunning) {
+      console.log('Already Started');
     } else {
-      this.hasStarted = true;
-      console.log("Stopwatch started");
+      this.isRunning = true;
+      console.log('Started');
     }
   }
 
   stop(): void {
-    if (!this.hasStarted) {
-      console.log("Stopwatch already stopped");
+    if (this.isRunning) {
+      this.isRunning = false;
+      console.log('Stopped');
     } else {
-      this.hasStarted = false;
-      console.log("Stopwatch stopped");
+      console.log('Already Stopped');
     }
   }
 }
